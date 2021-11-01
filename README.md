@@ -8,7 +8,7 @@ Also available in:
 
 ## Heroku
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/robinske/verify-server)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ranand-twilio/verify-server)
 
 Setup your `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, and `VERIFY_SERVICE_SID` as a Heroku config variables. You can do this via the [CLI](https://devcenter.heroku.com/articles/config-vars#managing-config-vars) or in the [Heroku dashboard](https://devcenter.heroku.com/articles/config-vars#using-the-heroku-dashboard).
 
