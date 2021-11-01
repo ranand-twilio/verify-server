@@ -14,6 +14,7 @@ client = Client(app.config['TWILIO_ACCOUNT_SID'], app.config['TWILIO_AUTH_TOKEN'
 def start():
     country_code = request.values.get("country_code")
     phone_number = request.values.get("phone_number")
+    verify_channel = request.values.get("via")
     full_phone = "+{}{}".format(country_code, phone_number)
 
     SERVICE = app.config['VERIFY_SERVICE_SID']
@@ -22,7 +23,7 @@ def start():
         r = client.verify \
             .services(SERVICE) \
             .verifications \
-            .create(to=full_phone, channel='sms')
+            .create(to=full_phone, channel=verify_channel)
         return jsonify(success=True, message="Verification sent to {}".format(r.to))
     except Exception as e:
         return jsonify(success=False, message="Error sending verification: {}".format(e))
